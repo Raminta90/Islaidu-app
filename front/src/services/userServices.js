@@ -3,7 +3,7 @@ import axios from "axios";
 const API_URL = '/api/user';
 const API_URL_LOGIN = '/api/user/login'
 
-// Log In
+// Prisijungimas
 const getLogIn = async(login) =>{
     try{
         const response = await axios.post(API_URL_LOGIN, login);
@@ -14,7 +14,7 @@ const getLogIn = async(login) =>{
     }
 }
 
-// Register
+// Registracija
 const postRegister = async (register) => {
     try {
         const response = await axios.post(API_URL, register);

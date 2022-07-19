@@ -31,9 +31,6 @@ const SetTransaction = ({getData}) => {
     name='text'
     value={text}
     onChange={(e)=> setText(e.target.value)} />
-    {/* <Form.Text className="text-muted">
-      We'll never share your email with anyone else.
-    </Form.Text> */}
   </Form.Group>
 
   <Form.Group className="mb-3 text-white bg-secondary" controlId="formBasicPassword">

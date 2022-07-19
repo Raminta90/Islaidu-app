@@ -3,6 +3,9 @@ import { useState } from 'react';
 import userServices from '../services/userServices';
 import {Form, Button} from 'react-bootstrap'
 
+
+
+//Registracijos forma
 const Register = () => {
         const [username, setUser] = useState('');
         const [email, setEmail] = useState('');
@@ -26,58 +29,34 @@ const Register = () => {
 
   return (
     <div className='mainPage bg-secondary' >
-      <h1 className='text-center my-3 text-warning'>Registration</h1>
+        <h1 className='text-center my-3 text-warning'>Registration</h1>
         <Form onSubmit={onSubmit}>
-  <Form.Group className="mb-3 text-white" controlId="formBasicEmail">
-    <Form.Label>Username</Form.Label>
-    <Form.Control type="text" placeholder="Enter Username" 
-    name='text'
-    value={username}
-    onChange={(e)=> setUser(e.target.value)} required/>
-    </Form.Group>
-  <Form.Group className="mb-3 text-white" controlId="formBasicEmail">
-    <Form.Label>Email</Form.Label>
-    <Form.Control type="email" placeholder="Enter Email" 
-    name='text'
-    value={email}
-    onChange={(e)=> setEmail(e.target.value)} required/>
-    </Form.Group>
-
-  <Form.Group className="mb-3 text-white" controlId="formBasicPassword">
-    <Form.Label>Password</Form.Label>
-    <Form.Control type="password" placeholder="Enter Password"  name='text'
-    value={password}
-    onChange={(e)=> setPassword(e.target.value)} required/>
-  </Form.Group>
+          <Form.Group className="mb-3 text-white" controlId="formBasicEmail">
+              <Form.Label>Username</Form.Label>
+              <Form.Control type="text" placeholder="Enter Username" 
+                            name='text'
+                            value={username}
+                            onChange={(e)=> setUser(e.target.value)} required/>
+          </Form.Group>
+          <Form.Group className="mb-3 text-white" controlId="formBasicEmail">
+                <Form.Label>Email</Form.Label>
+                <Form.Control type="email" placeholder="Enter Email" 
+                              name='text'
+                              value={email}
+                              onChange={(e)=> setEmail(e.target.value)} required/>
+          </Form.Group>
+          <Form.Group className="mb-3 text-white" controlId="formBasicPassword">
+                <Form.Label>Password</Form.Label>
+                <Form.Control type="password" placeholder="Enter Password"  
+                              name='text'
+                              value={password}
+                              onChange={(e)=> setPassword(e.target.value)} required/>
+          </Form.Group>
   
-  <Button variant="primary bg-warning" type="submit">
-    Sign In
-  </Button>
-</Form>
-        {/* <div className="registration">
-            <h1>Registration</h1>
-            <label>User Name</label>
-            <input type="text" 
-            value={username}
-            onChange={(e)=> setUser(e.target.value)} />
-            <label>Email</label>
-            <input type="email" 
-            value={email}
-            onChange={(e)=> setEmail(e.target.value)}/>
-            <label>Password</label>
-            <input type="text" value={password}
-            onChange={(e)=> setPassword(e.target.value)}/>
-            <button type='submit'>Register</button>
-        </div>
-        <div className="logIn">
-            <h1>LogIn</h1>
-            <input type="text" placeholder='Username...'/>
-            <input type="text" placeholder='Password...'/>
-            <button type='submit'>LogIn</button>
-        </div> */}
-
+          <Button variant="primary bg-warning" type="submit">Sign In</Button>
+        </Form>
     </div>
-  )
+)
 }
 
 export default Register
